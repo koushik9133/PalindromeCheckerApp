@@ -15,7 +15,7 @@ public class UseCase3PalindromeCheckerApp {
             reversed = reversed + input.charAt(i);
         }
 
-        if (input.equals(reversed)) {
+        if (input.equalsIgnoreCase(reversed)) {
             System.out.println("The string is a Palindrome.");
         } else {
             System.out.println("The string is NOT a Palindrome.");
