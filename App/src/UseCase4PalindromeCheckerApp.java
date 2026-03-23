@@ -2,18 +2,20 @@ import java.util.Scanner;
 
 public class UseCase4PalindromeCheckerApp {
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
-        String input = sc.nextLine();
 
-        char[] chars = input.toCharArray();
+        System.out.print("Enter a string: ");
+        String str = sc.nextLine();
 
-        int start = 0;
-        int end = chars.length - 1;
-
+        char[] arr = str.toCharArray();
         boolean isPalindrome = true;
 
-        while (start < end) {
-            if (chars[start] != chars[end]) {
+        int start = 0;
+        int end = arr.length - 1;
+
+        while(start < end) {
+            if(arr[start] != arr[end]) {
                 isPalindrome = false;
                 break;
             }
@@ -21,7 +23,11 @@ public class UseCase4PalindromeCheckerApp {
             end--;
         }
 
-        System.out.println("Input : " + input);
-        System.out.println("Is Palindrome? : " + isPalindrome);
+        if(isPalindrome)
+            System.out.println("The string is a Palindrome");
+        else
+            System.out.println("The string is NOT a Palindrome");
+
+        sc.close();
     }
 }
